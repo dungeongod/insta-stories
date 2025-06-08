@@ -1,0 +1,367 @@
+.story-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Story Background and Image */
+.story-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.story-image {
+  max-width: 100vw;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.story-image.loading {
+  opacity: 0;
+}
+
+/* Loading States */
+.story-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.story-error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.story-error p {
+  font-size: 16px;
+  margin: 0;
+  padding: 20px;
+}
+
+/* TAP/CLICK Navigation Zones */
+.navigation-zone-left,
+.navigation-zone-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 15;
+  cursor: pointer;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.navigation-zone-left {
+  left: 0;
+}
+
+.navigation-zone-right {
+  right: 0;
+}
+
+/* Progress Bars */
+.story-progress-container {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  gap: 2px;
+  z-index: 20;
+}
+
+.progress-bar {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar.completed {
+  background: white;
+}
+
+.progress-bar.active {
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.progress-bar.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+  border-radius: inherit;
+  width: 0%;
+  animation: fillProgressBar 5s linear forwards;
+}
+
+@keyframes fillProgressBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progress-bar.inactive {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Story Header */
+.story-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.7) 0%, 
+    rgba(0, 0, 0, 0.4) 60%, 
+    transparent 100%
+  );
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.story-header-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 16px;
+  min-height: 48px;
+}
+
+.story-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.story-header-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.story-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.story-header-username {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-header-meta {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.story-timestamp {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+.story-caption {
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-header-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.story-close-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.story-close-button:hover,
+.story-close-button:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .story-progress-container {
+    top: 8px;
+    left: 12px;
+    right: 12px;
+  }
+  
+  .story-header {
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+  
+  .story-header-content {
+    padding: 0 12px;
+    min-height: 44px;
+  }
+  
+  .story-header-avatar {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .story-header-username {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  
+  .story-header-meta {
+    font-size: 11px;
+    line-height: 14px;
+  }
+  
+  .story-caption {
+    font-size: 11px;
+    line-height: 14px;
+  }
+  
+  .story-close-button {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    padding: 6px;
+  }
+}
+
+/* Handle safe areas on modern phones */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .story-header {
+    padding-top: calc(40px + env(safe-area-inset-top));
+  }
+  
+  .story-progress-container {
+    top: calc(12px + env(safe-area-inset-top));
+  }
+  
+  @media (max-width: 768px) {
+    .story-header {
+      padding-top: calc(32px + env(safe-area-inset-top));
+    }
+    
+    .story-progress-container {
+      top: calc(8px + env(safe-area-inset-top));
+    }
+  }
+}
+
+/* Ensure story image is properly sized on mobile */
+@media (max-width: 480px) {
+  .story-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .story-header-content {
+    padding: 0 8px;
+  }
+  
+  .story-progress-container {
+    left: 8px;
+    right: 8px;
+  }
+} 

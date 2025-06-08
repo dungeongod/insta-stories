@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "nikhil",
+      "avatarUrl": "https://images.unsplash.com/photo-1551717743-49959800b1f6?w=150&h=150&fit=crop",
+      "stories": [
+        {
+          "id": "story_1_1",
+          "imageUrl": "https://images.unsplash.com/photo-1551717743-49959800b1f6?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T08:30:00Z"
+        },
+        {
+          "id": "story_1_2",
+          "imageUrl": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T15:20:00Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "aman",
+      "avatarUrl": "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=150&h=150&fit=crop",
+      "stories": [
+        {
+          "id": "story_2_1",
+          "imageUrl": "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T10:15:00Z"
+        },
+        {
+          "id": "story_2_2",
+          "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T16:45:00Z"
+        },
+        {
+          "id": "story_2_3",
+          "imageUrl": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T19:30:00Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "sahil",
+      "avatarUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=150&h=150&fit=crop",
+      "stories": [
+        {
+          "id": "story_3_1",
+          "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T12:00:00Z"
+        },
+        {
+          "id": "story_3_2",
+          "imageUrl": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T18:20:00Z"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "rishabh",
+      "avatarUrl": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=150&h=150&fit=crop",
+      "stories": [
+        {
+          "id": "story_4_1",
+          "imageUrl": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T07:45:00Z"
+        },
+        {
+          "id": "story_4_2",
+          "imageUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T14:30:00Z"
+        },
+        {
+          "id": "story_4_3",
+          "imageUrl": "https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T22:10:00Z"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "newton",
+      "avatarUrl": "https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=150&h=150&fit=crop",
+      "stories": [
+        {
+          "id": "story_5_1",
+          "imageUrl": "https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T09:50:00Z"
+        },
+        {
+          "id": "story_5_2",
+          "imageUrl": "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T16:15:00Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "rajan",
+      "avatarUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=150&h=150&fit=crop",
+      "stories": [
+        {
+          "id": "story_6_1",
+          "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T11:20:00Z"
+        },
+        {
+          "id": "story_6_2",
+          "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T17:55:00Z"
+        },
+        {
+          "id": "story_6_3",
+          "imageUrl": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400&h=700&fit=crop",
+          "timestamp": "2024-06-07T21:40:00Z"
+        }
+      ]
+    }
+  ]
+} 
