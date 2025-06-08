@@ -108,7 +108,4 @@ npm run test
 npm run dev          # Development server
 npm run build        # Production build
 npm run test         # Run tests in watch mode
-npm run test:run     # Run tests once
-npm run test:ui      # Run tests with Vitest UI
-npm run test:coverage # Run tests with coverage
 ```
