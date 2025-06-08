@@ -45,17 +45,8 @@ npm run preview
 ## Testing
 
 ```bash
-# Run component tests
-npm run test:run
-
 # Run tests in watch mode
 npm run test
-
-# Run tests with UI
-npm run test:ui
-
-# Run tests with coverage
-npm run test:coverage
 ```
 
 ## Design Choices & Optimization
